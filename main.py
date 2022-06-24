@@ -1,24 +1,7 @@
 import textstat  # https://pypi.org/project/textstat/
+import docx2txt
 
-text=("This report will describe current issues facing light pollution and potential solutions"
- "dealing with the UN sustainable goal that “ensures access to affordable, reliable, sustainable"
- "and modern energy for all” [18]. The potential solutions will not only describe the cutting-edge"
- "technology that Electrip Inc. provides but will also include other solutions that can also improve"
- "the electricity consumption through light usage. The document will provide research that will help"
- "convince the user to save electricity by describing the feasibility of doing so. The report will"
- "cover the human involvement and environmental (human health, conditions, corporate and personal"
- "financial significance, atmospheric impact, ecosystems, migration pattern, wildlife life cycles)"
- "involvement in light pollution and excessive consumption. Furthermore, other topics such as simple"
- "solutions that can be achieved form personal initiative (Psychological techniques and energy"
- "efficient light investments), along side smart technology that Electrip Inc. has to offer."
- "Additionally, the mechanism will be described in terms of logistics and technology involved"
- "(Sensor/actuator interface with AI). The scope of the report will mainly cover the need for"
- "Electrip Inc. the personal/home environment as well as workspaces and technicality of the"
- "sensor/actuator interface and how the AI will interact with the currently integrated technology"
- "present in current spaces. It will explore ultra wideband wireless connection, frequency and"
- "concepts of data domains utilized by the AI. The document will not cover the installation"
- "processes and the specific costs for technology integration as technology integration methodology"
- "will vary across different environments due to infrastructure of the building’s circuitry.")
+text = docx2txt.process("text.docx")
 
 print(textstat.flesch_reading_ease(text))
 print(textstat.flesch_kincaid_grade(text))
